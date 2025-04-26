@@ -1,7 +1,7 @@
 // app/login/page.tsx
 'use client';
 import React from 'react';
-import AuthWrapper from '@/src/components/common/authformwrapper';
+import AuthWrapper from '@/src/components/auth/authformwrapper';
 import  Button  from '@/src/components/common/button';
 import { FiLogIn } from "react-icons/fi";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

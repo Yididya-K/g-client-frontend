@@ -4,11 +4,12 @@ import Image from 'next/image';
 import authImage from '@/public/auth.png'; // Adjust the path as necessary
 interface AuthWrapperProps {
   title: string;
+  subtitle?: string;
   children: React.ReactNode;
   footerText?: React.ReactNode;
 }
 
-const AuthWrapper: React.FC<AuthWrapperProps> = ({ title, children, footerText }) => {
+const AuthWrapper: React.FC<AuthWrapperProps> = ({ title,subtitle, children, footerText }) => {
   return (
     <div className="min-h-screen flex flex-col justify-between">
       <main className="flex flex-col md:flex-row items-center justify-center flex-grow px-4 py-8 max-w-7xl mx-auto w-full gap-12">
@@ -26,6 +27,8 @@ const AuthWrapper: React.FC<AuthWrapperProps> = ({ title, children, footerText }
         {/* Form Section */}
         <div className="w-full md:w-1/2 max-w-md">
           <h2 className="text-2xl md:text-3xl font-semibold text-center mb-6 text-gray-800">{title}</h2>
+          {subtitle && <p className="text-sm sm text-center mb-6 text-gray-800">{subtitle}</p>}
+
           {children}
           {footerText && <div className="mt-6 text-center text-sm text-gray-600">{footerText}</div>}
         </div>
