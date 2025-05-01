@@ -4,6 +4,10 @@ import { FaPlus, FaCheck , FaArrowRight} from 'react-icons/fa';
 import Navbar from '../components/user/navbar';
 import Footer from "@/src/components/user/footer";
 import LoginPage from "./auth/login/page";
+import HomeHero from '../components/user/homeHero';
+import OurSolutions from "../components/user/ourSolutions";
+import NextStepSection from "../components/user/nextStepSection";
+import WeAreProudSection from "../components/user/weAreProudSection";
 
 export default function Home() {
  
@@ -13,7 +17,10 @@ export default function Home() {
      
   
       <Navbar />
-    
+      <HomeHero /> 
+      <OurSolutions />
+      <NextStepSection/>
+      <WeAreProudSection />
       <LoginPage />
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
