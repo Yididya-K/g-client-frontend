@@ -35,7 +35,7 @@ const SignupPage = () => {
       title="Signup to get started"
       footerText={
         <>
-          Already have an account? <a href="/login" className="text-blue-600 underline">login</a>
+          Already have an account? <a href="/user/auth/login" className="text-blue-600 underline">login</a>
         </>
       }
     >
@@ -93,7 +93,7 @@ const SignupPage = () => {
           error={errors.confirmPassword}
         />
         <div className="text-right text-sm text-blue-600">
-          <a href="#">Forgot password ?</a>
+          <a href="/user/auth/login">Already have an account</a>
         </div>
         <Button className="w-full mb-4 flex items-center justify-center " rightIcon={<FiLogIn/>}>Sign up</Button>
       </form>

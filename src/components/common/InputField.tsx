@@ -23,6 +23,7 @@ const InputField: React.FC<InputFieldProps> = ({
   name,
   placeholder,
   value,
+  
   onChange,
   icon,
   type = 'text',
@@ -56,7 +57,7 @@ const InputField: React.FC<InputFieldProps> = ({
         className={`relative flex items-center rounded border ${getBorderColor()} bg-white px-3 py-2 transition-all hover:border-blue-500 ${getFocusColor()}`}
       >
         {/* Left icon */}
-        <FontAwesomeIcon icon={icon} className="text-gray-400 mr-2" />
+        <FontAwesomeIcon icon={icon} className="text-gray-400 mr-2  w-4 h-4" />
 
         {/* Input */}
         <input

@@ -24,21 +24,22 @@ const Navbar = () => {
             <Link href="/" className="hover:text-[#01589A]">
               Home
             </Link>
-            <Link href="/courses" className="hover:text-[#01589A]">
+            <Link href="/user/courses" className="hover:text-[#01589A]">
               Courses
             </Link>
           </div>
         </div>
         {/* Desktop Login Button */}
         <div className="hidden md:flex gap-x-4 xl:mr-40 lg:mr-20">
-          <Button rightIcon={<FiLogIn size={18} />}>Login</Button>
-          <Button variant="outlined" rightIcon={<FiLogIn size={18} />}>
+          <Button rightIcon={<FiLogIn size={18} href="/user/auth/login" />}>Login</Button>
+          <Button variant="outlined" rightIcon={<FiLogIn size={18} href="/user/auth/signup"/>}>
             Signup
           </Button>
         </div>
 
         {/* Mobile Menu Icon */}
         <button
+
           className="md:hidden text-[#01589A]"
           onClick={() => setSidebarOpen(true)}
         >
@@ -91,17 +92,17 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            href="/contact"
+            href="/user/courses"
             onClick={() => setSidebarOpen(false)}
             className="hover:text-[#01589A]"
           >
-            Contact
+            Courses
           </Link>
         </div>
 
         <div className="mt-auto flex flex-col pt-8 gap-y-2">
-  <Button rightIcon={<FiLogIn size={18} />}>Login</Button>
-  <Button variant="outlined" rightIcon={<FiLogIn size={18} />}>
+  <Button href="/user/auth/login" rightIcon={<FiLogIn size={18} />}>Login</Button>
+  <Button href="/user/auth/signup" variant="outlined" rightIcon={<FiLogIn size={18} />}>
     Signup
   </Button>
 </div>

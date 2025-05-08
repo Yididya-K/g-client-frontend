@@ -36,7 +36,7 @@ const StatsSection: React.FC = () => {
             <div className="flex items-center justify-center">
               <FontAwesomeIcon
                 icon={faGraduationCap}
-                className="text-6xl text-[#4182B3] mx-auto mb-4"
+                className="w-20 h-20 text-[#4182B3] mx-auto mb-4"
               />
             </div>
             <p className="mt-4 text-5xl font-bold text-[#01589A]">4+</p>
@@ -46,7 +46,7 @@ const StatsSection: React.FC = () => {
             <div className="flex items-center justify-center">
               <FontAwesomeIcon
                 icon={faUsers}
-                className="text-6xl text-[#4182B3] mx-auto mb-4"
+                className="w-20 h-20 text-[#4182B3] mx-auto mb-4"
               />
             </div>
             <p className="mt-4 text-5xl font-bold text-[#01589A]">200+</p>
@@ -56,7 +56,7 @@ const StatsSection: React.FC = () => {
             <div className="flex items-center justify-center">
               <FontAwesomeIcon
                 icon={faClock}
-                className="text-6xl text-b mx-auto mb-4 text-[#4182B3]"
+                className="w-20 h-20 text-b mx-auto mb-4 text-[#4182B3]"
               />
             </div>
             <p className="mt-4 text-5xl font-bold text-[#01589A]">250+</p>
@@ -110,7 +110,7 @@ const OnBoarding: React.FC = () => {
       {/* Left Side - Steps */}
       <div className="flex flex-col gap-10 w-[508px] h-[616px] md:w-1/2 relative">
         {/* Step 1 */}
-        <div className="bg-white rounded shadow-xl p-6 relative z-10 w-[508px] h-[152px] border-l-4 border-[#01589A]">
+        <div className="bg-white rounded shadow-xl p-6 relative z-10 w-[508px] h-[152px] hover:border-l-4 hover:border-[#01589A]">
           <div className="flex items-start gap-4">
             <TbLogin2 className="text-[#01589ACC] text-8xl" />
             <div>
@@ -131,7 +131,7 @@ const OnBoarding: React.FC = () => {
         </div>
 
         {/* Step 2 */}
-        <div className="bg-white rounded shadow-xl p-6 relative z-10 w-[508px] h-[152px]">
+        <div className="bg-white rounded shadow-xl p-6 relative z-10 w-[508px] h-[152px] hover:border-l-4  hover:border-[#01589A]">
           <div className="flex items-start gap-4">
             <MdOutlineArrowCircleUp className="text-[#01589ACC] text-8xl" />
             <div>
@@ -151,7 +151,7 @@ const OnBoarding: React.FC = () => {
         </div>
 
         {/* Step 3 */}
-        <div className="bg-white rounded shadow-xl p-6 relative z-10 w-[508px] h-[152px]">
+        <div className="bg-white rounded shadow-xl p-6 relative z-10 w-[508px] h-[152px] hover:border-l-4  hover:border-[#01589A]">
           <div className="flex items-start gap-4">
             <FaGraduationCap className="text-[#01589ACC] text-8xl" />
             <div>

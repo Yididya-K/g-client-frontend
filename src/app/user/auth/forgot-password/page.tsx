@@ -8,6 +8,7 @@ import AuthWrapper from '@/src/components/auth/authformwrapper';
 import { FiArrowRight } from "react-icons/fi";
 
 
+
 const ForgotPassword = () => {
   const [formData, setFormData] = useState({
     email: ''
@@ -23,6 +24,7 @@ const ForgotPassword = () => {
   };
 
   return (
+
     <AuthWrapper
     title="Forgot Password"
     subtitle=' Enter you email address to reset password '
@@ -43,6 +45,7 @@ const ForgotPassword = () => {
       </Button>
     </form>
     </AuthWrapper>
+ 
   );
 };
 

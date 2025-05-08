@@ -26,11 +26,12 @@ const LoginPage = () => {
     }
   };
   return (
+
     <AuthWrapper
       title="Log in to continue your learning journey"
       footerText={
         <>
-          Need to create an account? <a href="/signup" className="text-blue-600 underline">signup</a>
+          Need to create an account? <a href="/user/auth/signup" className="text-blue-600 underline">signup</a>
         </>
       }
     >
@@ -64,11 +65,12 @@ const LoginPage = () => {
         success={!errors.email && email.length > 0}
       />
         <div className="text-right text-sm text-blue-600">
-          <a href="#">Forgot password ?</a>
+          <a href="/user/auth/forgot-password">Forgot password ?</a>
         </div>
         <Button className="w-full mb-4 flex items-center justify-center " rightIcon={<FiLogIn/>}>Login</Button>
       </form>
     </AuthWrapper>
+ 
   );
 };
 
