@@ -1,5 +1,4 @@
-import Navbar from "@/src/components/user/navbar";
-import Footer from "@/src/components/user/footer";
+
 import CourseCard from "@/src/components/user/CourseCard";
 import { CiSearch } from "react-icons/ci";
 const courses = [

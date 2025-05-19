@@ -1,6 +1,6 @@
 "use client";
 import { faEnvelope, faPhone, faUser, faMapMarkerAlt, faBook, faVenusMars, faWheelchair } from '@fortawesome/free-solid-svg-icons';
-import InputField from '@/src/components/common/InputField';
+import InputField from '@/src/components/user/InputField';
 import { useState } from 'react';
 
 

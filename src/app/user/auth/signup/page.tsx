@@ -4,12 +4,11 @@ import React from 'react';
 import AuthWrapper from '@/src/components/auth/authformwrapper';
 import  Button  from '@/src/components/common/button';
 import { FiLogIn } from "react-icons/fi";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle } from '@fortawesome/free-brands-svg-icons';
-import InputField from "@/src/components/common/InputField";
+
+import InputField from "@/src/components/user/InputField";
 import { faEnvelope ,faLock,faUser} from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
-
+import Image from 'next/image';
 
 const SignupPage = () => {
     const [formData, setFormData] = useState({
@@ -39,7 +38,7 @@ const SignupPage = () => {
         </>
       }
     >
-      <Button className="w-full mb-4 flex items-center justify-center " variant="outlined" leftIcon={<FontAwesomeIcon icon={faGoogle} />}>
+      <Button className="w-full mb-4 flex items-center justify-center " variant="outlined" leftIcon={<Image src="/google.png" alt="Google" width={20} height={20} />} >
        
         Signup using Google
       </Button>
@@ -95,7 +94,7 @@ const SignupPage = () => {
         <div className="text-right text-sm text-blue-600">
           <a href="/user/auth/login">Already have an account</a>
         </div>
-        <Button className="w-full mb-4 flex items-center justify-center " rightIcon={<FiLogIn/>}>Sign up</Button>
+        <Button className="w-full mb-4 flex items-center justify-center " onClick={handleSubmit} rightIcon={<FiLogIn/>}>Sign up</Button>
       </form>
     </AuthWrapper>
   );

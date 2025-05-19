@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import InputField from '@/src/components/common/InputField';
+import InputField from '@/src/components/user/InputField';
 import { faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import Button from "@/src/components/common/button"; // your button
 import AuthWrapper from '@/src/components/auth/authformwrapper';

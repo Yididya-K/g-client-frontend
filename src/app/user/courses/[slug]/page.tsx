@@ -3,6 +3,7 @@ import { courses } from "@/src/data/courses"; // mock or real data
 import Button from "@/src/components/common/button";
 import Image from "next/image";
 import { FaStar, FaRegStar } from "react-icons/fa";
+import {Clock,GraduationCap ,User, CalendarDays} from "lucide-react"
 import Link from "next/link";
 
 const CourseCard: React.FC<{
@@ -11,26 +12,24 @@ const CourseCard: React.FC<{
   description: string;
 }> = ({ imageSrc, title, description }) => {
   return (
-    <div className="flex bg-white shadow-xl p-4 md:p-6 w-full max-w-xl mx-auto md:mb-10">
-      {/* Image Section */}
-      <div className="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 bg-gray-5 overflow-hidden">
+    // Card component for related courses
+    <div className="flex items-center bg-white shadow-xl rounded-lg p-6 hover:shadow-2xl hover:cursor-pointer transition-shadow">
+      <div className="mr-6 flex-shrink-0">
         <Image
           src={imageSrc}
           alt={title}
-          width={260}
-          height={360}
+          width={202}
+          height={209}
           className="object-contain"
         />
       </div>
-
-      {/* Text Section */}
-      <div className="ml-6 flex flex-col justify-center">
-        <h3 className="text-lg md:text-xl font-semibold text-gray-900">
-          {title}
-        </h3>
-        <p className="mt-2 text-sm md:text-base text-gray-600">{description}</p>
+      <div>
+        <h3 className="text-md font-bold mb-1 text-gray-800">{title}</h3>
+        <p className="text-sm text-gray-600">{description}</p>
       </div>
     </div>
+
+
   );
 };
 
@@ -82,7 +81,7 @@ export default function CourseDetailPage({ params }: Props) {
                     <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
                     </svg>
-                    <span className="ml-1 text-sm font-medium text-white md:ml-2">{course.slug}</span>
+                    <span className="ml-1 text-md font-bold text-white md:ml-2">{course.slug}</span>
                 </div>
             </li>
         </ol>
@@ -91,7 +90,7 @@ export default function CourseDetailPage({ params }: Props) {
                 <h1 className="text-3xl font-bold mb-4">{course.title}</h1>
                 <p className="mb-6">{course.description}</p>
 
-                <div className="grid grid-cols-3 sm:grid-cols-3 gap-4 mb-8">
+                <div className="grid grid-cols-3 sm:grid-cols-3  mb-8 max-w-5/6">
                   <div>
                     <p className="font-semibold">Instructor</p>
                     <p>{course.instructor}</p>
@@ -102,7 +101,7 @@ export default function CourseDetailPage({ params }: Props) {
                   </div>
                   <div>
                     <p className="font-semibold">1 review</p>
-                    Rating{" "}
+                  
                     <span className="ml-2 flex">
                       {Array.from({ length: 5 }).map((_, i) =>
                         course.rating > i ? (
@@ -150,9 +149,8 @@ export default function CourseDetailPage({ params }: Props) {
                     {/* Duration */}
                     <div className="flex items-center justify-between pb-2 border-b border-gray-300">
                       <div className="flex items-center">
-                        {/* Font Awesome Clock icon */}
-                        {/* Make sure you have Font Awesome included in your project */}
-                        <i className="fas fa-clock h-5 w-5 mr-3 text-gray-500"></i>
+                      <Clock className="h-5 w-5 mr-2"/>
+                        
                         <span>Duration</span>
                       </div>
                       <span>{course.duration}</span>
@@ -161,9 +159,8 @@ export default function CourseDetailPage({ params }: Props) {
                     {/* Courses */}
                     <div className="flex items-center justify-between pb-2 border-b border-gray-300">
                       <div className="flex items-center">
-                        {/* Font Awesome Graduation Cap icon */}
-                        {/* Make sure you have Font Awesome included in your project */}
-                        <i className="fas fa-graduation-cap h-5 w-5 mr-3 text-gray-500"></i>
+                      <GraduationCap className="h-5 w-5 mr-2"/>
+                        
                         <span>Courses</span>
                       </div>
                       <span>{course.courses}</span>
@@ -172,22 +169,20 @@ export default function CourseDetailPage({ params }: Props) {
                     {/* Instructor */}
                     <div className="flex items-center justify-between pb-2 border-b border-gray-300">
                       <div className="flex items-center">
-                        {/* Font Awesome User icon */}
-                        {/* Make sure you have Font Awesome included in your project */}
-                        <i className="fas fa-user h-5 w-5 mr-3 text-gray-500"></i>
+                      <User className="h-5 w-5 mr-2"/>
+                       
                         <span>Instructor</span>
                       </div>
                       <span>{course.instructor}</span>
                     </div>
 
                     {/* Date */}
-                    <div className="flex items-center justify-between pb-4">
+                    <div className="flex items-center justify-between pb-4 border-b border-gray-300">
                       {" "}
-                      {/* No border-b on the last item */}
+                 
                       <div className="flex items-center">
-                        {/* Font Awesome Calendar icon */}
-                        {/* Make sure you have Font Awesome included in your project */}
-                        <i className="fas fa-calendar-alt h-5 w-5 mr-3 text-gray-500"></i>
+                     
+                      <CalendarDays className="h-5 w-5 mr-2" />
                         <span>Date</span>
                       </div>
                       <span>{course.startDate}</span>
@@ -195,12 +190,12 @@ export default function CourseDetailPage({ params }: Props) {
                   </div>
 
                   {/* Price */}
-                  <div className="text-3xl font-bold text-gray-800 mt-4 mb-6 text-center">
-                    {course.price}
+                  <div className="text-2xl font-semibold text-gray-800 mt-4 mb-6 text-center">
+                   ${course.price}
                   </div>
 
                   {/* Enroll Button */}
-                  <Button className="w-full">Enroll</Button>
+                  <Button className="w-full items-center justify-center">Enroll</Button>
                 </div>
               </div>
             </div>
@@ -212,7 +207,7 @@ export default function CourseDetailPage({ params }: Props) {
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">
             Explore related courses
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {course.relatedCourses.map((item, i) => (
               <CourseCard
                 key={i}

@@ -21,14 +21,14 @@ export const courses = [
       ],
       relatedCourses: [
         {
-          title: "Cloud Computing",
-          description: "Hands-on experience in cloud architecture.",
-          image: "/cloudCourse.jpg",
-          slug: "cloud-computing"
+          title: "Data Science Mastery",
+          description: "Equip yourself with the skills to analyze, interpret, and leverage data, becoming an expert.",
+          image: "/datascienceCourse.jpg",
+          slug: "data-science-mastery"
         },
         {
           title: "Cloud Computing",
-          description: "Hands-on experience in cloud architecture.",
+          description: "Gain hands-on experience in cloud architecture, preparing you to  manage scalable solutions.",
           image: "/cloudCourse.jpg",
           slug: "cloud-computing"
         },

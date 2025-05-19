@@ -15,7 +15,7 @@ interface SolutionCardProps {
 
 const SolutionCard: React.FC<SolutionCardProps> = ({ title, description, price, previewText = "Preview", icon }) => {
   return (
-    <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 shadow-2xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:border-blue-500/20">
+    <div className="bg-white/5 backdrop-blur-md h-[304px] w-[325px] rounded-xl p-6 shadow-2xl border border-white/10 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:border-blue-500/20">
       <div className="mb-4 text-[#01589A]">
         {icon}
       </div>
@@ -40,11 +40,11 @@ const OurSolutions = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold  mb-4">Our Solutions</h2>
-          <p className="text-gray-700 max-w-2xl mx-auto">
+          <p className="text-gray-700 max-w-[1031px] mx-auto">
             Create your account quickly with just your email or social media login, then explore a wide range of solutions.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-4/5 items-center mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 max-w-[1031px] items-center justify-center align-middle mx-auto">
           <SolutionCard
             title="Software Development"
             description="Unlock your potential with comprehensive training in modern software development."

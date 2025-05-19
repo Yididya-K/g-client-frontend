@@ -36,7 +36,7 @@ const StatsSection: React.FC = () => {
             <div className="flex items-center justify-center">
               <FontAwesomeIcon
                 icon={faGraduationCap}
-                className="w-20 h-20 text-[#4182B3] mx-auto mb-4"
+                className="w-[84px] h-[80px] text-[#4182B3] mx-auto mb-4"
               />
             </div>
             <p className="mt-4 text-5xl font-bold text-[#01589A]">4+</p>
@@ -46,7 +46,7 @@ const StatsSection: React.FC = () => {
             <div className="flex items-center justify-center">
               <FontAwesomeIcon
                 icon={faUsers}
-                className="w-20 h-20 text-[#4182B3] mx-auto mb-4"
+                className="w-[84px] h-[80px] text-[#4182B3] mx-auto mb-4"
               />
             </div>
             <p className="mt-4 text-5xl font-bold text-[#01589A]">200+</p>
@@ -56,7 +56,7 @@ const StatsSection: React.FC = () => {
             <div className="flex items-center justify-center">
               <FontAwesomeIcon
                 icon={faClock}
-                className="w-20 h-20 text-b mx-auto mb-4 text-[#4182B3]"
+                className="w-[84px] h-[84px] text-b mx-auto mb-4 text-[#4182B3]"
               />
             </div>
             <p className="mt-4 text-5xl font-bold text-[#01589A]">250+</p>
@@ -89,15 +89,15 @@ const TimeToStartSection: React.FC = () => {
       {/* Content */}
       <div className="relative z-20 flex flex-col md:flex-row items-center justify-between w-full max-w-6xl px-6">
         <div className="text-center md:text-left">
-          <h2 className="text-4xl font-bold mb-2">
+          <h2 className="text-2xl md:text-4xl font-bold mb-2">
             It’s time to start investing in yourself
           </h2>
-          <p className="text-lg">
+          <p className=" text-md md:text-lg mb-2">
             Online courses open the opportunity for learning to almost anyone,
             regardless of their scheduling commitments.
           </p>
         </div>
-        <Button className="border border-white ">Get started</Button>
+        <Button className="border border-white  ">Get started</Button>
       </div>
     </section>
   );
@@ -110,7 +110,7 @@ const OnBoarding: React.FC = () => {
       {/* Left Side - Steps */}
       <div className="flex flex-col gap-10 w-[508px] h-[616px] md:w-1/2 relative">
         {/* Step 1 */}
-        <div className="bg-white rounded shadow-xl p-6 relative z-10 w-[508px] h-[152px] hover:border-l-4 hover:border-[#01589A]">
+        <div className="bg-white rounded transition-all duration-300 hover:scale-[1.02] hover:shadow-xl shadow-xl p-6 relative z-10 sm:w-[508px] sm:h-[152px] hover:border-l-4 hover:border-[#01589A]">
           <div className="flex items-start gap-4">
             <TbLogin2 className="text-[#01589ACC] text-8xl" />
             <div>
@@ -131,7 +131,7 @@ const OnBoarding: React.FC = () => {
         </div>
 
         {/* Step 2 */}
-        <div className="bg-white rounded shadow-xl p-6 relative z-10 w-[508px] h-[152px] hover:border-l-4  hover:border-[#01589A]">
+        <div className="bg-white rounded transition-all duration-300 hover:scale-[1.02] hover:shadow-xl shadow-xl p-6 relative z-10 w-[508px] h-[152px] hover:border-l-4  hover:border-[#01589A]">
           <div className="flex items-start gap-4">
             <MdOutlineArrowCircleUp className="text-[#01589ACC] text-8xl" />
             <div>
@@ -151,7 +151,7 @@ const OnBoarding: React.FC = () => {
         </div>
 
         {/* Step 3 */}
-        <div className="bg-white rounded shadow-xl p-6 relative z-10 w-[508px] h-[152px] hover:border-l-4  hover:border-[#01589A]">
+        <div className="bg-white transition-all duration-300 hover:scale-[1.02] hover:shadow-xl rounded shadow-xl p-6 relative z-10 w-[508px] h-[152px] hover:border-l-4  hover:border-[#01589A]">
           <div className="flex items-start gap-4">
             <FaGraduationCap className="text-[#01589ACC] text-8xl" />
             <div>
@@ -172,7 +172,7 @@ const OnBoarding: React.FC = () => {
         <Image
           src="/onboarding.png"
           alt="Learning process illustration"
-          className=" object-contain shadow-2xl rounded-2xl"
+          className=" object-contain shadow-2xl rounded-2xl transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
           width={508} 
           height={616} 
         />

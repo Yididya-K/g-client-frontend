@@ -5,23 +5,23 @@ import Link from "next/link";
 import { FiMenu, FiX, FiLogIn } from "react-icons/fi";
 import Button from "../common/button";
 import classNames from "classnames";
+import Image from 'next/image';
 
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <>
-      <nav className="bg-white shadow px-6 py-4 flex justify-between items-center">
+      <nav className="bg-white  px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-20">
           {/* Logo */}
           <div className="flex items-center xl:ml-40 lg:ml-20">
-            <span className="text-[#01589A] text-3xl font-bold">C</span>
-            <span className="text-[#01589A] text-xl font-semibold">Lient</span>
+          <Image src="/logo-small.png" alt="Logo" width={100} height={60} className="rounded-full" />
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-6 text-lg text-black">
-            <Link href="/" className="hover:text-[#01589A]">
+            <Link href="/" className="hover:text-[#01589A] hom">
               Home
             </Link>
             <Link href="/user/courses" className="hover:text-[#01589A]">
@@ -31,8 +31,8 @@ const Navbar = () => {
         </div>
         {/* Desktop Login Button */}
         <div className="hidden md:flex gap-x-4 xl:mr-40 lg:mr-20">
-          <Button rightIcon={<FiLogIn size={18} href="/user/auth/login" />}>Login</Button>
-          <Button variant="outlined" rightIcon={<FiLogIn size={18} href="/user/auth/signup"/>}>
+        <Button href="/user/auth/login" rightIcon={<FiLogIn size={18} />}>Login</Button>
+          <Button variant="outlined" href="/user/auth/signup" rightIcon={<FiLogIn size={18} />}>
             Signup
           </Button>
         </div>
@@ -40,7 +40,7 @@ const Navbar = () => {
         {/* Mobile Menu Icon */}
         <button
 
-          className="md:hidden text-[#01589A]"
+          className="md:hidden text-[#01589A] hover:cursor-pointer"
           onClick={() => setSidebarOpen(true)}
         >
           <FiMenu size={28} />
@@ -72,12 +72,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center mb-6">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <span className="text-[#01589A] text-3xl font-bold">G</span>
-            <span className="text-[#01589A] text-xl font-semibold">client</span>
+           <Image src="/logo-small.png" alt="Logo" width={80} height={60} className="rounded-full" />
           </div>
           <button
             onClick={() => setSidebarOpen(false)}
-            className="text-[#01589A]"
+            className="text-[#01589A] hover:cursor-pointer"
           >
             <FiX size={24} />
           </button>
@@ -87,14 +86,14 @@ const Navbar = () => {
           <Link
             href="/"
             onClick={() => setSidebarOpen(false)}
-            className="hover:text-[#01589A]"
+            className="hover:text-[#01589A] hover:cursor-pointer"
           >
             Home
           </Link>
           <Link
             href="/user/courses"
             onClick={() => setSidebarOpen(false)}
-            className="hover:text-[#01589A]"
+            className="hover:text-[#01589A] hover:cursor-pointer"
           >
             Courses
           </Link>

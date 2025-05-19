@@ -6,25 +6,25 @@ const enrolledCourses = [
   {
     title: 'Quick Introduction to ReactJs',
     tech: 'ReactJs',
-    image: '/softwareCourse.jpg',
+    image: '/react.jpg',
     status: 'Registered',
   },
   {
     title: 'Quick Introduction to NodeJs',
     tech: 'NodeJs',
-    image: '/softwareCourse.jpg',
+    image: '/node.png',
     status: 'Registered',
   },
   {
     title: 'Quick Introduction to NextJs',
     tech: 'NextJs',
-    image: '/softwareCourse.jpg',
+    image: '/next.png',
     status: 'Registered',
   },
   {
     title: 'Quick Introduction to Django',
     tech: 'Django',
-    image: '/softwareCourse.jpg',
+    image: '/django.png',
     status: 'Registered',
   },
 ];
@@ -39,9 +39,36 @@ const rateUs = [
     title: 'Cloud Computing',
     description:
       'Gain hands-on experience in cloud architecture, preparing you to manage scalable solutions.',
-      image: '/softwareCourse.jpg',
+      image: '/cloudCourse.jpg',
   },
 ];
+
+const CourseCard: React.FC<{
+  imageSrc: string;
+  title: string;
+  description: string;
+}> = ({ imageSrc, title, description }) => {
+  return (
+    // Card component for related courses
+    <div className="flex items-center bg-white shadow-xl rounded-lg p-6 hover:shadow-2xl hover:cursor-pointer transition-shadow">
+      <div className="mr-6 flex-shrink-0">
+        <Image
+          src={imageSrc}
+          alt={title}
+          width={202}
+          height={209}
+          className="object-contain"
+        />
+      </div>
+      <div>
+        <h3 className="text-md font-bold mb-1 text-gray-800">{title}</h3>
+        <p className="text-sm text-gray-600">{description}</p>
+      </div>
+    </div>
+
+
+  );
+};
 
 export default function Dashboard() {
   return (
@@ -74,26 +101,21 @@ export default function Dashboard() {
       </section>
 
       {/* Rate Us Section */}
-      <section>
-        <h2 className="text-lg font-semibold mb-10">Rate us</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {rateUs.map((item, index) => (
-            <div key={index} className="flex bg-white shadow rounded p-4 items-center gap-4">
-              <Image
-                src={item.image}
-                alt={item.title}
-                width={100}
-                height={100}
-                className="w-24 h-24 object-contain"
+      <div className="container mx-auto mt-8 p-6">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+            Explore related courses
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {rateUs.map((item, i) => (
+              <CourseCard
+                key={i}
+                imageSrc={item.image}
+                title={item.title}
+                description={item.description}
               />
-              <div>
-                <h4 className="font-semibold">{item.title}</h4>
-                <p className="text-sm text-gray-600">{item.description}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </section>
     </div>
   );
 }

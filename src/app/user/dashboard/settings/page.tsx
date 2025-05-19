@@ -1,7 +1,7 @@
 
 
 "use client";
-import InputField from "@/src/components/common/InputField";
+import InputField from "@/src/components/user/InputField";
 import { useState } from "react";
 import { faUser,faPhone,faMapMarkerAlt,faLock} from '@fortawesome/free-solid-svg-icons';
 import Button from "@/src/components/common/button";

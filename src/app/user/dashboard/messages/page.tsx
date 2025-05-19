@@ -13,30 +13,7 @@ type Message = {
 };
 
 const messages: Message[] = [
-  {
-    id: 1,
-    sender: "Admin",
-    subject: "Welcome to the platform!",
-    date: "2025-05-01",
-    status: "Read",
-    content: "We're glad to have you onboard. Here’s how to get started...",
-  },
-  {
-    id: 2,
-    sender: "Support",
-    subject: "Your subscription is active",
-    date: "2025-05-03",
-    status: "Unread",
-    content: "Thank you for subscribing. You now have full access.",
-  },
-  {
-    id: 3,
-    sender: "Team",
-    subject: "New update available",
-    date: "2025-05-06",
-    status: "Unread",
-    content: "We’ve released new features. Check them out in your dashboard.",
-  },
+  
 ];
 
 const Messages = () => {
@@ -45,8 +22,12 @@ const Messages = () => {
   return (
     <div className="p-6">
       <h2 className="text-2xl font-bold mb-6">Messages</h2>
-
-      <div className="bg-white shadow rounded-lg overflow-hidden">
+      {messages.length === 0 ? (
+        <div className="bg-white shadow rounded-lg p-6 text-center text-gray-600">
+          No messages to show.
+        </div>
+      ) : (
+        <div className="bg-white shadow rounded-lg overflow-hidden">
         <table className="min-w-full text-sm">
           <thead>
             <tr className="bg-gray-100 text-gray-600 uppercase text-xs leading-normal">
@@ -93,6 +74,8 @@ const Messages = () => {
           </tbody>
         </table>
       </div>
+      )}
+      
 
       {/* Modal for message details */}
       {selectedMessage && (

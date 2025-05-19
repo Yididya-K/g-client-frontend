@@ -19,7 +19,7 @@ const techStackList = [
 const NextStepSection = () => {
   return (
     <section className="bg-[#01589A] py-16 h-3/4">
-      <div className="container  px-4 grid md:grid-cols-2 gap-8 items-center ">
+      <div className="container  grid md:grid-cols-2 gap-8 items-center max-w-8xl justify-center mr-">
         {/* Text Content */}
         <div className='sm:mx-20'>
             <div className='mb-20'>
